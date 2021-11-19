@@ -3,13 +3,11 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
-type AxiosTypes = {
-  baseURL: string
-  headers: {}
-}
-
 const api = axios.create({
   baseURL: process.env.BASE_URL,
 })
+
+api.defaults.headers.common["Authorization"] =
+  "Token token=" + process.env.TOKEN
 
 export default api
