@@ -1,0 +1,24 @@
+:root {
+  --pagebg: #fff;
+  --main: #102581;
+  --bglink: rgba(0, 0, 0, 0.3);
+  --darkbg: #fff;
+  --lightbg: #000;
+  --lighter: #444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--pagebg);
+}
+
+table,
+th,
+td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}

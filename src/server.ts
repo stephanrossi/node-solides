@@ -36,5 +36,5 @@ app.use<RequestHandler>((req, res) => {
 
 //Start server
 app.listen(process.env.PORT || 3000, () => {
-  console.log("Server running")
+  console.log("Server running on http://localhost:3000/api")
 })

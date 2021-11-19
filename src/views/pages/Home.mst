@@ -1,9 +1,42 @@
-<h1>Página Home</h1>
+<!DOCTYPE html>
+<html lang="en">
 
-<div style="background-color: aqua;">
-    {{#data}}
-        <span style="color: red;">
-            {{name}}
-        </span>
-    {{/data}}
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Home</title>
+</head>
+
+<body>
+
+    <h1>Página Home</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Perfil</th>
+                <th>Data do teste</th>
+                <th>Profiler</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#response}}
+            {{#data}}
+            <tr>
+                <td scope="row">{{name}}</td>
+                <td>{{perfil}}</td>
+                <td>{{testDate}}</td>
+                {{#profiler}}
+                <td>{{nivelenergia}}</td>
+                {{/profiler}}
+            </tr>
+            {{/data}}
+            {{/response}}
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -5,12 +5,12 @@ import api from "../helpers/api"
 dotenv.config()
 
 export const Home: RequestHandler = async (req, res) => {
-  const { data } = await api.get("/profiler/19441", {
+  const response = await api.get("/profiler", {
     headers: {
       Authorization: "Token token=" + process.env.TOKEN,
     },
   })
-  console.log(data.name)
+  // console.log(data)
 
-  res.render("pages/Home", data)
+  res.render("pages/Home", { response })
 }
